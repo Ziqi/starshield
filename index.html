@@ -236,20 +236,20 @@
 
   <main class="container">
     <section class="hero">
-      <div class="eyebrow">MIT Open Source · Python 3.9+ Stdlib Only · Zero External Network Calls</div>
+      <div class="eyebrow">MIT Open Source · Python 3.10+ Stdlib Only · Single-File starshield.pyz · Zero Network Calls</div>
       <h1>Deterministic Chromium Cache Carving, Container Provenance & Source-Cited Payment Dispute Triage</h1>
       <p class="subtitle">
-        <code>starshield-forensics v0.3.6</code> is a self-contained digital forensics prototype for inspecting uncompacted Chromium IndexedDB / LevelDB write-ahead logs (<code>.log</code>), validating PNG/JPEG ICC metadata structures, and verifying multi-jurisdiction payment identifiers with byte-offset provenance.
+        <code>starshield-forensics v0.3.6</code> is a self-contained digital forensics CLI, library, and single-file <code>starshield.pyz</code> zipapp (with a 10-second air-gapped <code>precheck</code> gate) for inspecting uncompacted Chromium IndexedDB / LevelDB write-ahead logs (<code>.log</code>), validating PNG/JPEG ICC metadata structures, and verifying multi-jurisdiction payment identifiers with byte-offset provenance.
       </p>
       <div class="author-bar">
         <div>
           <strong>Ziqi Xiao</strong> · Independent Security Architect & Digital Forensics Researcher
         </div>
         <div style="margin-left:auto; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="https://github.com/Ziqi/starshield-forensics">GitHub: @Ziqi/starshield-forensics</a>
-          <a class="btn btn-outline" href="https://doi.org/10.5281/zenodo.24145805" target="_blank" rel="noopener">DOI: 10.5281/zenodo.24145805</a>
+          <a class="btn btn-primary" href="https://github.com/Ziqi/starshield-forensics/releases/tag/v0.3.6">GitHub Release v0.3.6 (.pyz)</a>
+          <a class="btn btn-outline" href="https://doi.org/10.5281/zenodo.24145804" target="_blank" rel="noopener">DOI: 10.5281/zenodo.24145804</a>
           <a class="btn btn-outline" href="./Sample_Evidentiary_Triage_Workpaper.pdf" target="_blank" rel="noopener">Sample Workpaper (PDF)</a>
-          <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/issues/new?title=StarShield%20Forensics%20Inquiry">Open Inquiry</a>
+          <a class="btn btn-outline" href="#collaborate">Pilot &amp; Research Scope</a>
         </div>
       </div>
       <div class="notice">
@@ -326,7 +326,7 @@
     <section id="boundaries" class="section-card">
       <h2>2. Epistemic Discipline: Separating Observed Bytes from Triage Leads</h2>
       <p style="color:var(--muted);">
-        Overstating forensic certainty undermines pre-action credibility. Every output field emitted by <code>starshield-forensics</code> distinguishes raw byte observations from derived checksums and non-conclusive leads:
+        Overstating forensic certainty undermines pre-action credibility. Every output field emitted by <code>starshield-forensics</code> applies a four-tier provenance taxonomy (<code>OBSERVED</code>, <code>DERIVED</code>, <code>INFERRED</code>, <code>UNKNOWN</code>) separating raw byte observations from derived checksums and unverified external state:
       </p>
       <table>
         <thead>
@@ -362,6 +362,12 @@
             <td><code>DERIVED</code> / <code>INFERRED</code></td>
             <td>Cross-endpoint intervals depend on NTP clock synchronization; CDN/edge tags reflect network routing rather than physical operator geolocation.</td>
           </tr>
+          <tr>
+            <td><strong>Compacted <code>.ldb</code> &amp; Server State</strong></td>
+            <td>10-second <code>precheck</code> detection of Snappy SSTables (<code>0xdb4775248b80fb57</code>) &amp; Blink <code>0xFF</code> envelopes</td>
+            <td><code>UNKNOWN</code></td>
+            <td>Records evicted into compacted SSTables or held only on upstream SaaS/bank servers are explicitly marked <code>UNKNOWN</code> rather than silently omitted.</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -380,27 +386,27 @@
       <h2>4. Open-Source Code, Synthetic Benchmark Suite &amp; Pilot Inquiries</h2>
       <div class="cta-grid">
         <div class="cta-box">
-          <h3>1. Open-Source Toolkit (`v0.3.6`)</h3>
+          <h3>1. Open-Source Toolkit (<code>v0.3.6</code>)</h3>
           <p style="color:var(--muted); font-size:0.9rem;">
-            Inspect the pure-Python LevelDB <code>.log</code> parser, PNG/JPEG container inspector, Luhn/IBAN validators, and 22 adversarial &amp; canary unit tests.
+            Inspect the pure-Python LevelDB <code>.log</code> multi-schema carver, 10s <code>precheck</code> gate, single-file <code>starshield.pyz</code>, PNG/JPEG inspector, Luhn/IBAN validators, and 24 adversarial &amp; canary unit tests.
           </p>
-          <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics">GitHub: @Ziqi/starshield-forensics</a>
+          <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/releases/tag/v0.3.6">GitHub: @Ziqi/starshield-forensics</a>
         </div>
         <div class="cta-box">
-          <h3>2. StarShield-Bench-24 Evaluation Suite</h3>
+          <h3>2. StarShield-Bench-24 &amp; OWASP GenAI Suite</h3>
           <p style="color:var(--muted); font-size:0.9rem;">
-            24 seeded synthetic benchmark cases with machine-scored ground truth: measuring byte-offset citation fidelity and indirect prompt-injection resilience on untrusted financial transcripts.
+            24 seeded synthetic benchmark cases scoring byte-offset citation fidelity and indirect prompt-injection survival (plus 12 EN/ZH financial-triage cases contributed upstream to OWASP GenAI Data Security Initiative PR #119).
           </p>
           <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/tree/main/benchmark">View Benchmark Suite</a>
         </div>
         <div class="cta-box">
           <h3>3. Scoped Fixed-Fee Law Firm &amp; DFIR Pilots</h3>
           <p style="color:var(--muted); font-size:0.9rem;">
-            Download our reproducible 2-page synthetic Sample Evidentiary Workpaper or open a 3-business-day Feasibility Micro-Pilot (<code>£850</code>) / Standard Tier (<code>£1,650–£2,850</code>) scope inquiry.
+            Client IT runs <code>python3 starshield.pyz precheck</code> locally in 10s first (<code>£0</code> if compacted <code>NO_GO</code>; <code>£850</code> on Firm PO / Net-7 for 3-day Micro-Pilot; <code>£1,650–£3,500</code> Standard Tiers). Never post client data on public GitHub Issues.
           </p>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
             <a class="btn btn-primary" href="./Sample_Evidentiary_Triage_Workpaper.pdf" target="_blank" rel="noopener">Sample Workpaper (PDF)</a>
-            <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/issues/new?title=Pilot%20Scope%20Inquiry">Pilot Scope Inquiry</a>
+            <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/issues/new?title=Public%20Technical%20Question%20(No%20Client%20Data)">Public Tech Issues (No Client Data)</a>
           </div>
         </div>
       </div>
