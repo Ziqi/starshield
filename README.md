@@ -6,29 +6,30 @@
 [![SLSA 3](https://slsa.dev/images/gh-badge-level3.svg)](https://github.com/Ziqi/starshield-forensics/attestations)
 [![OSPS Baseline](https://img.shields.io/badge/OpenSSF%20OSPS%20Baseline-Level%203%20%28EU%20CRA%20Aligned%29-brightgreen)](https://github.com/Ziqi/starshield-forensics/blob/main/SECURITY.md#5-openssf-osps-baseline-level-3--eu-cyber-resilience-act-cra-alignment)
 [![UK FSR Statutory Code / ISO 17025 Validation](https://img.shields.io/badge/Validation-UK%20FSR%20%28FSA--DIG--100%29%20%26%20ISO%2017025%20Aligned-blue)](https://github.com/Ziqi/starshield-forensics/blob/main/VALIDATION_REPORT_FSR_ISO17025.md)
-[![PyPI](https://img.shields.io/pypi/v/starshield-forensics?label=PyPI%20%28PEP%20740%29&color=blue)](https://pypi.org/project/starshield-forensics/0.3.7/)
+[![PyPI](https://img.shields.io/pypi/v/starshield-forensics?label=PyPI%20%28PEP%20740%29&color=blue)](https://pypi.org/project/starshield-forensics/0.3.8/)
 
-**Official web documentation portal, OpenSSF Scorecard badge endpoint (`8.0 / 10`), and clean-room evidentiary triage workpaper repository for [`starshield-forensics`](https://github.com/Ziqi/starshield-forensics) (covering Chromium browsers & Electron desktop apps such as Microsoft Teams, Slack, WhatsApp Desktop, and Discord).**
+**Official web documentation portal, OpenSSF Scorecard badge endpoint (`8.0 / 10`), and clean-room evidentiary triage workpaper repository for [`starshield-forensics`](https://github.com/Ziqi/starshield-forensics) (covering FinTech/e-commerce screenshot structural screening, developer diagnostics for Chromium & Electron desktop apps such as `VS Code`, `Microsoft Teams`, `Slack`, `WhatsApp Desktop`, and `Discord`, UK FSR / ISO 17025 DFIR triage, and a zero-dependency `starshield mcp` server).**
 
 ---
 
 ## Quick Links
 
 - **Live Documentation Portal:** <https://ziqi.github.io/starshield/>
-- **Core Python Library & CLI (`starshield-forensics v0.3.7`):** <https://github.com/Ziqi/starshield-forensics>
+- **Core Python Library, CLI & MCP Server (`starshield-forensics v0.3.8`):** <https://github.com/Ziqi/starshield-forensics>
   - **10-Second Zero-Install Showcase:** `uvx --from starshield-forensics starshield demo`
+  - **Zero-Install AI Agent `MCP` Server (`Claude Desktop` / `Cursor` / `Antigravity` / `Windsurf`):** `uvx --from starshield-forensics starshield mcp` *(HMAC-masked by default)*
   - **OpenSSF Best Practices & OSPS Baseline:** [`Project #16602 (Silver — 226%)`](https://www.bestpractices.dev/projects/16602) · [`OSPS Baseline Level 3 (EU CRA)`](https://github.com/Ziqi/starshield-forensics/blob/main/SECURITY.md#5-openssf-osps-baseline-level-3--eu-cyber-resilience-act-cra-alignment)
   - **OpenSSF Scorecard & Fuzzing:** [`8.0 / 10 (Fuzzing 10/10 via ClusterFuzzLite/Atheris · Pinned-Dependencies 9/10)`](https://github.com/Ziqi/starshield-forensics/actions/workflows/scorecard.yml) · [`SLSA Build Level 3`](https://github.com/Ziqi/starshield-forensics/attestations)
   - **PyPI Package (PEP 740 Attested) & Homebrew Tap:** `pip install starshield-forensics` · `brew install Ziqi/tap/starshield-forensics`
   - **Method Validation:** [`UK FSR Statutory Code (FSA – DIG 100) / ISO 17025 Summary`](https://github.com/Ziqi/starshield-forensics/blob/main/VALIDATION_REPORT_FSR_ISO17025.md)
   - **Zenodo Archival DOI & UNESCO SWHID:** [`10.5281/zenodo.24145804`](https://doi.org/10.5281/zenodo.24145804) (`v0.3.7`: [`10.5281/zenodo.24156262`](https://doi.org/10.5281/zenodo.24156262)) · [`swh:1:snp:4ed5efecab5e40975e75a5c5107b63121b1df60a`](https://archive.softwareheritage.org/swh:1:snp:4ed5efecab5e40975e75a5c5107b63121b1df60a;origin=https://github.com/Ziqi/starshield-forensics)
-- **Sample Clean-Room Evidentiary Workpaper (PDF, `v0.3.7`):** [`Sample_Evidentiary_Triage_Workpaper.pdf`](./Sample_Evidentiary_Triage_Workpaper.pdf) *(100% synthetic supplier-invoice benchmark scenario; zero real case data)*
+- **Sample Clean-Room Evidentiary Workpaper (PDF, `v0.3.8`):** [`Sample_Evidentiary_Triage_Workpaper.pdf`](./Sample_Evidentiary_Triage_Workpaper.pdf) *(100% synthetic supplier-invoice benchmark scenario; zero real case data)*
 
 ---
 
 ## 中文说明（StarShield 在线文档与净室合成基准底稿门户）
 
-本仓库承载 **[`starshield-forensics`](https://github.com/Ziqi/starshield-forensics)**（获颁 Linux 基金会 **OpenSSF Best Practices `Silver` 银牌 `#16602` [226%]**、**OpenSSF OSPS Baseline Level 3**、**OpenSSF Scorecard `8.0/10` [含 `ClusterFuzzLite` 持续模糊测试 `Fuzzing 10/10`]** 及 **SLSA Level 3**，原生覆盖 Chromium 浏览器与 Teams/Slack/WhatsApp/Discord 等 Electron 桌面端的纯离线电子数据取证工具包）的静态文档站点与标准化证据初筛工作底稿示例：
+本仓库承载 **[`starshield-forensics`](https://github.com/Ziqi/starshield-forensics)**（获颁 Linux 基金会 **OpenSSF Best Practices `Silver` 银牌 `#16602` [226%]**、**OpenSSF OSPS Baseline Level 3**、**OpenSSF Scorecard `8.0/10` [含 `ClusterFuzzLite` 持续模糊测试 `Fuzzing 10/10`]** 及 **SLSA Level 3**，内置隐私脱敏 **`starshield mcp` 服务端**，覆盖财务/电商付款截图结构初筛、`VS Code / Teams / Slack / Discord` 等 Electron 与 Chrome 缓存离线排障恢复，以及司法电子证据初筛）的静态文档站点与标准化证据初筛工作底稿示例：
 
 1. **在线门户站点**：[`https://ziqi.github.io/starshield/`](https://ziqi.github.io/starshield/)（由仓库根目录 `index.html` 驱动）。
 2. **合成案例示范底稿**：[`Sample_Evidentiary_Triage_Workpaper.pdf`](./Sample_Evidentiary_Triage_Workpaper.pdf) 展示了如何按 `OBSERVED` / `DERIVED` / `INFERRED` / `UNKNOWN` 四级认知标准向律所与调查机构呈现技术初筛结论（内含数据 100% 为净室虚构测试向量）。
