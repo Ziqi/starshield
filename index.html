@@ -236,10 +236,10 @@
 
   <main class="container">
     <section class="hero">
-      <div class="eyebrow">MIT (REUSE 3.3) · PyPI PEP 740 Attested · OpenSSF Silver (#16602, 226%) · Scorecard 8.0/10 (Fuzzing 10/10) · SLSA Level 3 &amp; Sigstore · Stdlib Only</div>
-      <h1>Deterministic Chromium Cache Carving, Container Provenance & Source-Cited Payment Dispute Triage</h1>
+      <div class="eyebrow">MIT (REUSE 3.3) · PyPI PEP 740 &amp; Homebrew Tap · OpenSSF Silver (#16602, 226%) · OSPS Baseline Level 3 · Scorecard 8.0/10 (Fuzzing 10/10) · SLSA Level 3 · Stdlib Only</div>
+      <h1>Deterministic Chromium &amp; Electron Cache Carving, Container Provenance &amp; Source-Cited Payment Dispute Triage</h1>
       <p class="subtitle">
-        <code>starshield-forensics v0.3.7</code> (try instantly via <code>uvx --from starshield-forensics starshield demo</code>, install via <code>pip install starshield-forensics</code> with PEP 740 digital attestations, or run air-gapped <code>starshield.pyz</code>) is a cryptographically signed, bit-for-bit reproducible digital forensics CLI and library (with a 10-second air-gapped <code>precheck</code> gate) for inspecting uncompacted Chromium IndexedDB / LevelDB write-ahead logs (<code>.log</code>), validating PNG/JPEG ICC metadata structures, and verifying multi-jurisdiction payment identifiers with byte-offset provenance.
+        <code>starshield-forensics v0.3.7</code> (try instantly via <code>uvx --from starshield-forensics starshield demo</code>, install via <code>pip install starshield-forensics</code> or <code>brew install Ziqi/tap/starshield-forensics</code>, or run air-gapped <code>starshield.pyz</code>) is a cryptographically signed, bit-for-bit reproducible digital forensics CLI and library (with a 10-second air-gapped <code>precheck</code> gate) for inspecting uncompacted Chromium browser &amp; Electron desktop app (<code>Microsoft Teams</code>, <code>Slack</code>, <code>WhatsApp Desktop</code>, <code>Discord</code>) IndexedDB / LevelDB write-ahead logs (<code>.log</code>), validating PNG/JPEG ICC metadata structures, and verifying multi-jurisdiction payment identifiers with byte-offset provenance.
       </p>
       <div class="author-bar">
         <div>
@@ -247,13 +247,16 @@
         </div>
         <div style="margin-left:auto; display:flex; gap:10px; flex-wrap:wrap;">
           <a class="btn btn-primary" href="https://pypi.org/project/starshield-forensics/0.3.7/" target="_blank" rel="noopener">PyPI v0.3.7 (PEP 740)</a>
+          <a class="btn btn-outline" href="https://github.com/Ziqi/homebrew-tap" target="_blank" rel="noopener">Homebrew Tap (Ziqi/tap)</a>
           <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/releases/tag/v0.3.7">GitHub Release v0.3.7 (.pyz)</a>
           <a class="btn btn-outline" href="https://www.bestpractices.dev/projects/16602" target="_blank" rel="noopener">OpenSSF Silver (#16602 · 226%)</a>
+          <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/blob/main/SECURITY.md#5-openssf-osps-baseline-level-3--eu-cyber-resilience-act-cra-alignment" target="_blank" rel="noopener">OSPS Baseline Level 3 (EU CRA)</a>
           <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/actions/workflows/scorecard.yml" target="_blank" rel="noopener">OpenSSF Scorecard (8.0/10)</a>
           <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/actions/workflows/cflite.yml" target="_blank" rel="noopener">ClusterFuzzLite (Fuzzing 10/10)</a>
           <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/attestations" target="_blank" rel="noopener">SLSA L3 &amp; Sigstore Attestations</a>
           <a class="btn btn-outline" href="https://github.com/Ziqi/starshield-forensics/blob/main/VALIDATION_REPORT_FSR_ISO17025.md" target="_blank" rel="noopener">UK FSR (FSA – DIG 100) / ISO 17025</a>
           <a class="btn btn-outline" href="https://doi.org/10.5281/zenodo.24156262" target="_blank" rel="noopener">v0.3.7 DOI: 10.5281/zenodo.24156262</a>
+          <a class="btn btn-outline" href="https://archive.softwareheritage.org/swh:1:snp:4ed5efecab5e40975e75a5c5107b63121b1df60a;origin=https://github.com/Ziqi/starshield-forensics" target="_blank" rel="noopener">SWHID: swh:1:snp:4ed5efec</a>
           <a class="btn btn-outline" href="./Sample_Evidentiary_Triage_Workpaper.pdf" target="_blank" rel="noopener">Sample Workpaper (PDF)</a>
           <a class="btn btn-outline" href="#collaborate">Pilot &amp; Research Scope</a>
         </div>
@@ -394,7 +397,7 @@
         <div class="cta-box">
           <h3>1. Open-Source Toolkit (<code>v0.3.7</code> · PyPI PEP 740 · SLSA L3)</h3>
           <p style="color:var(--muted); font-size:0.9rem;">
-            Try instantly via <code>uvx --from starshield-forensics starshield demo</code>, install via <code>pip install starshield-forensics</code> (PEP 740 OIDC attested), or run single-file <code>starshield.pyz</code>. Backed by ISO/IEC 5962 SPDX 2.3 SBOM, FSFE REUSE 3.3 &amp; OpenSSF <code>SECURITY-INSIGHTS.yml</code> (OSPS), OpenSSF Silver (<code>#16602</code>, 226%), Scorecard (<code>8.0/10</code>) with ClusterFuzzLite/Atheris continuous fuzzing, Concept DOI <code>10.5281/zenodo.24145804</code>, and 25 adversarial &amp; canary unit tests.
+            Try instantly via <code>uvx --from starshield-forensics starshield demo</code>, install via <code>pip install starshield-forensics</code> (PEP 740 OIDC attested) or <code>brew install Ziqi/tap/starshield-forensics</code>, or run single-file <code>starshield.pyz</code>. Backed by ISO/IEC 5962 SPDX 2.3 SBOM, FSFE REUSE 3.3, OpenSSF <code>SECURITY-INSIGHTS.yml</code> &amp; OSPS Baseline Level 3, OpenSSF Silver (<code>#16602</code>, 226%), Scorecard (<code>8.0/10</code>) with ClusterFuzzLite/Atheris continuous fuzzing, Concept DOI <code>10.5281/zenodo.24145804</code>, UNESCO SWHID <code>swh:1:snp:4ed5efec...</code>, and 25 adversarial &amp; canary unit tests.
           </p>
           <div style="display:flex; gap:8px; flex-wrap:wrap;">
             <a class="btn btn-outline" href="https://pypi.org/project/starshield-forensics/0.3.7/" target="_blank" rel="noopener">PyPI Package</a>
