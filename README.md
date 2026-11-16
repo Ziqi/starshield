@@ -7,6 +7,7 @@
 [![OSPS Baseline](https://img.shields.io/badge/OpenSSF%20OSPS%20Baseline-Level%203%20%28EU%20CRA%20Aligned%29-brightgreen)](https://github.com/Ziqi/starshield-forensics/blob/main/SECURITY.md#5-openssf-osps-baseline-level-3--eu-cyber-resilience-act-cra-alignment)
 [![UK FSR Statutory Code / ISO 17025 Validation](https://img.shields.io/badge/Validation-UK%20FSR%20%28FSA--DIG--100%29%20%26%20ISO%2017025%20Aligned-blue)](https://github.com/Ziqi/starshield-forensics/blob/main/VALIDATION_REPORT_FSR_ISO17025.md)
 [![PyPI](https://img.shields.io/pypi/v/starshield-forensics?label=PyPI%20%28PEP%20740%29&color=blue)](https://pypi.org/project/starshield-forensics/0.3.8/)
+[![Glama MCP](https://img.shields.io/badge/Glama%20MCP-Verified%20%28Score%20B%29-8A2BE2)](https://glama.ai/mcp/servers/Ziqi/starshield-forensics)
 
 **Official web documentation portal, OpenSSF Scorecard badge endpoint (`8.0 / 10`), and clean-room evidentiary triage workpaper repository for [`starshield-forensics`](https://github.com/Ziqi/starshield-forensics) (covering FinTech/e-commerce screenshot structural screening, developer diagnostics for Chromium & Electron desktop apps such as `VS Code`, `Microsoft Teams`, `Slack`, `WhatsApp Desktop`, and `Discord`, UK FSR / ISO 17025 DFIR triage, and a zero-dependency `starshield mcp` server).**
 
@@ -17,7 +18,7 @@
 - **Live Documentation Portal:** <https://ziqi.github.io/starshield/>
 - **Core Python Library, CLI & MCP Server (`starshield-forensics v0.3.8`):** <https://github.com/Ziqi/starshield-forensics>
   - **10-Second Zero-Install Showcase:** `uvx --from starshield-forensics starshield demo`
-  - **Zero-Install AI Agent `MCP` Server (`Claude Desktop` / `Cursor` / `Antigravity` / `Windsurf`):** `uvx --from starshield-forensics starshield mcp` *(HMAC-masked by default)*
+  - **Zero-Install AI Agent `MCP` Server (`Claude Desktop` / `Cursor` / `Antigravity` / `Windsurf`):** `uvx --from starshield-forensics starshield mcp` *(HMAC-masked by default)* · [Glama Verified Sandbox](https://glama.ai/mcp/servers/Ziqi/starshield-forensics)
   - **OpenSSF Best Practices & OSPS Baseline:** [`Project #16602 (Silver — 226%)`](https://www.bestpractices.dev/projects/16602) · [`OSPS Baseline Level 3 (EU CRA)`](https://github.com/Ziqi/starshield-forensics/blob/main/SECURITY.md#5-openssf-osps-baseline-level-3--eu-cyber-resilience-act-cra-alignment)
   - **OpenSSF Scorecard & Fuzzing:** [`8.0 / 10 (Fuzzing 10/10 via ClusterFuzzLite/Atheris · Pinned-Dependencies 9/10)`](https://github.com/Ziqi/starshield-forensics/actions/workflows/scorecard.yml) · [`SLSA Build Level 3`](https://github.com/Ziqi/starshield-forensics/attestations)
   - **PyPI Package (PEP 740 Attested) & Homebrew Tap:** `pip install starshield-forensics` · `brew install Ziqi/tap/starshield-forensics`
